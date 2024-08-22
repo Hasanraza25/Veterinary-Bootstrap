@@ -1,0 +1,56 @@
+
+
+
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.menu {
+    background-color: $secondary;
+    font-family: "Poppins", sans-serif;
+    padding: 20px 10px;
+
+    .logo {
+        width: 210px;
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    ul {
+        li {
+            @include media-breakpoint-up(lg) {
+                padding-left: 20px;
+            }
+            font-weight: 500;
+
+            a {
+                font-size: 1.3rem;
+                color: $white !important;
+                &:hover{
+                    color: $primary !important;
+                }
+            }
+        }
+    }
+    @include searchbar;
+}
+
+@media (max-width: 991px) {
+    .menu {
+        .search-input {
+            width: 100%; /* Adjust the width for smaller screens */
+        }  
+    }
+}
+
+@media (min-width: 992px){
+    .menu{
+        a{
+            &:hover{
+                color: $primary !important;
+                transform: scale(1.2);
+            }
+        }    
+    }
+    
+}

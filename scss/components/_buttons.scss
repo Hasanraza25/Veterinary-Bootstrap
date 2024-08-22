@@ -1,0 +1,59 @@
+
+
+
+@use '../custom' as *;
+
+.intros{
+	.btn-1{
+    background-color: #00bec9;
+    border: 2px solid #00bec9;
+    padding: 0.8rem 1.5rem;
+    border-radius: 7px;
+    color: $white;
+    &:hover{
+	    	background-color: #008b9a;
+	    	font-weight: 600;
+	    }
+	}
+	.btn-2{
+    background-color: #fcc302;
+    border: 2px solid white;
+    padding: 0.8rem 1.3rem;
+    margin-left: 1.2rem;
+    border-radius: 7px;
+    color: $white;
+    &:hover{
+	    	background-color: #ffd800;
+        font-weight: 600;
+	    }
+	}
+}
+
+.text-info{
+    button {
+      background-color: #fcc302;
+      padding: 0.8rem 1.3rem;
+      border-radius: 7px;
+      border: none;
+      color: $white;
+      &:hover{
+        background-color: #ffd800;
+	    	font-weight: 600;
+      }
+    }
+}
+
+.service-box-2{
+	button{
+		background-color: #00bec9;
+    border: 2px solid #00bec9;
+    padding: 0.5rem 2.3rem;
+    color: $white;
+    font-size: 1.1rem;
+    &:hover{
+    	background-color: #008b9a;
+        font-weight: 600;
+    	
+    }
+	}
+}

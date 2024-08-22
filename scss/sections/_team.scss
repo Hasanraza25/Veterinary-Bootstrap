@@ -1,0 +1,39 @@
+
+
+
+@use '../custom' as *;
+
+.team{
+	padding: 5rem 0;
+}
+.team-box{
+	.team-img{
+		max-width: 340px;
+		max-height: 340px;
+		margin: 0 auto 30px;
+	}
+	h3{
+		font-family: "Poppins", sans-serif;
+		color: #313243;
+		font-weight: 700;
+	}
+	p{
+		font-family: "Poppins", sans-serif;
+		color: #313243;
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		position: relative;
+		top: -4px;
+	}
+	.icons{
+		display: flex;
+		justify-content: center;
+    	gap: 18px;
+		a{
+			font-size: 1.6rem;
+			position: relative;
+			top: -8px;
+		}
+
+	}
+}

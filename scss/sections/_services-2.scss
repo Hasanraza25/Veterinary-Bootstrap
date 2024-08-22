@@ -1,0 +1,40 @@
+
+
+
+@use '../custom' as *;
+
+.service-box-2{
+	.center-line {
+	    // line-height: 1.5;
+	    display: inline-block; /* Ensures the line is centered vertically */
+	    position: relative; /* Needed for absolute positioning of line */
+	}
+
+  	.center-line::after {
+	    text-decoration: line-through;
+	    content: '';
+	    position: absolute;
+	    top: 43%;
+	    left: 0;
+	    right: 0;
+	    height: 3px;
+	    background-color: $white;
+	}
+
+	h3{
+		font-size: 2rem;
+	}
+	span{
+		margin-left: 1rem;
+	}
+
+
+	@media only screen and (max-width: 767px) {
+		padding-bottom: 2rem;
+	}
+}
+
+
+
+
+

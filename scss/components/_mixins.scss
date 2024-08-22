@@ -1,0 +1,43 @@
+
+
+
+@use '../custom' as *;
+
+@mixin searchbar{
+	.search-container {
+        position: relative;
+        width: 250px;
+    }
+    .search-input {
+        border: none;
+        padding: 8px;
+        outline: none;
+        width: 100%;
+        background-color: #fcc302;
+        color: $white;
+        &::placeholder {
+            color: $white;
+        }
+    }
+    .search-icon {
+        position: absolute;
+        top: 0;	
+        right: 0;
+        background-color: #00bec9;
+        width: 55px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
+
+// ABSOLUTECENTER MIXINS
+@mixin absoluteCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

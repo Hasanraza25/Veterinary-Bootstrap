@@ -1,0 +1,92 @@
+
+
+
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.footer{
+	background-color: $footer;
+	padding-top: 5rem;
+	padding-bottom: 8rem;
+}
+.footer-menu{
+    font-family: "Poppins", sans-serif;
+	h3{
+		font-size: 30px;
+		font-weight: 500;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		li{
+			list-style-type: none;
+			a{
+				text-decoration: none;
+				color: $white;
+				font-size: 1.1rem;
+				line-height: 1.7;
+				&:hover{
+					color: $primary;
+				}
+			}	
+		}
+	}
+}
+
+.subscribe-form{
+    font-family: "Poppins", sans-serif;
+	width: 343px;
+	h3{
+		font-size: 30px;
+		font-weight: 500;
+	}
+	@include searchbar;
+	.search-container{
+		width: 320px;
+		height: 55px;
+		.search-input{
+			height: 100%;
+		}
+		.search-icon{
+			width: 80px;
+			i{
+				font-size: 20px;
+			}
+		}
+	}
+	.icons{
+		padding-top: 28px;
+		a{
+			font-size: 1.6rem;
+			color: $white;
+			padding-left: 20px;
+			&:hover{
+				color: $primary;
+			}
+		}
+
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.footer-menu{
+		padding-bottom: 1rem;
+	}
+	.subscribe-form{
+		margin: 0 auto;
+		padding-top: 2rem;
+	}
+}
+.back-to-top{
+	position: fixed;
+	right: 1.875rem;
+	bottom: 1.875rem;
+	width: 3rem;
+	height: 3rem;
+	z-index: 9999;
+	i{
+		color: $white;
+		font-size: 1rem;
+		@include absoluteCenter;
+	}
+}
