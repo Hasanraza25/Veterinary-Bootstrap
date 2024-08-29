@@ -11925,6 +11925,7 @@ textarea.form-control-lg {
   background-color: #daac00;
   font-family: "Poppins", sans-serif;
   padding: 20px 10px;
+  max-width: 100vw;
 }
 .menu .logo {
   width: 210px;
@@ -12034,7 +12035,7 @@ textarea.form-control-lg {
   font-size: 1.4rem;
   color: #313243;
   line-height: 1.3;
-  width: 450px;
+  max-width: 400px;
 }
 .text-section .text-img {
   position: relative;
@@ -12144,6 +12145,26 @@ textarea.form-control-lg {
     width: auto;
   }
 }
+.text-section-2 .text-info {
+  text-align: end; /* Align text to the right */
+  font-family: "Poppins", sans-serif;
+}
+.text-section-2 .text-info h1 {
+  font-size: 2.5rem;
+  color: #313243;
+  padding-bottom: 1rem;
+  max-width: 100%; /* Ensure full width utilization */
+}
+.text-section-2 .text-info p {
+  font-size: 1.4rem;
+  color: #313243;
+  line-height: 1.3;
+  max-width: 100%; /* Ensure full width utilization */
+}
+.text-section-2 .text-info button {
+  display: inline-block;
+  margin-left: auto; /* Align button to the right */
+}
 .text-section-2 .text-img-2 {
   position: relative;
   width: 70%;
@@ -12164,19 +12185,20 @@ textarea.form-control-lg {
   bottom: -1.6rem;
 }
 @media (max-width: 991.98px) and (min-width: 768px) {
+  .text-section-2 .text-info h1 {
+    font-size: 2rem;
+  }
+  .text-section-2 .text-info p {
+    font-size: 1.2rem;
+  }
+  .text-section-2 .text-img-2 img {
+    max-height: 280px;
+  }
   .text-section-2 .text-img-2::before {
     height: 120px;
     width: 140px;
     right: -1.2rem;
     bottom: -1.2rem;
-  }
-  .text-section-2 .text-info p {
-    position: relative;
-    right: 10px;
-  }
-  .text-section-2 .text-info .btn {
-    position: relative;
-    right: -0.5rem;
   }
 }
 @media (max-width: 540px) {
@@ -12188,15 +12210,15 @@ textarea.form-control-lg {
   }
   .text-section-2 .text-info {
     padding-top: 2rem;
-    text-align: center;
-    width: 450px;
+    text-align: center; /* Center text on small screens */
+    width: 100%; /* Full width on mobile */
   }
 }
-@media (min-width: 501px) and (max-width: 767px) {
+@media (min-width: 541px) and (max-width: 767px) {
   .text-section-2 .text-info {
     padding-top: 2rem;
-    text-align: center;
-    width: 450px;
+    text-align: center; /* Center text on small screens */
+    width: 100%; /* Full width on mobile */
   }
 }
 @media (max-width: 1200px) and (min-width: 992px) {
@@ -12209,7 +12231,8 @@ textarea.form-control-lg {
 }
 @media (min-width: 992px) {
   .text-section-2 .text-info {
-    width: 450px;
+    max-width: 450px;
+    margin-left: auto; /* Align text block to the right */
   }
 }
 

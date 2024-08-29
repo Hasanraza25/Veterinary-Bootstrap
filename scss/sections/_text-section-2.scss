@@ -1,18 +1,39 @@
-
-
-
 @use '../custom' as *;
 
-.text-section-2{
-	.text-img-2 {
-  position: relative;
-  width: 70%;
-  max-height: 23.5rem;
-  margin-bottom: 1.2rem;
-  img{
-    width: 100%;
+.text-section-2 {
+  .text-info {
+    text-align: end; /* Align text to the right */
+    font-family: "Poppins", sans-serif;
+
+    h1 {
+      font-size: 2.5rem;
+      color: #313243;
+      padding-bottom: 1rem;
+      max-width: 100%; /* Ensure full width utilization */
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: #313243;
+      line-height: 1.3;
+      max-width: 100%; /* Ensure full width utilization */
+    }
+
+    button {
+      display: inline-block;
+      margin-left: auto; /* Align button to the right */
+    }
   }
-  &::before{
+
+  .text-img-2 {
+    position: relative;
+    width: 70%;
+    max-height: 23.5rem;
+    margin-bottom: 1.2rem;
+    img {
+      width: 100%;
+    }
+    &::before {
       content: "";
       width: 180px;
       height: 160px;
@@ -23,64 +44,69 @@
       bottom: -1.6rem;
     }
   }
-	@media (max-width: 991.98px) and (min-width: 768px) {
-		.text-img-2 {
-		    img {
-		    }
-		    &::before{
-		      height: 120px;
-		      width: 140px;
-		      right: -1.2rem;
-	          bottom: -1.2rem;
-		    }
-    	}
-    	.text-info{
-    		p{
-    			position: relative;
-    			right: 10px;
-    		}
-    		.btn{
-    			position: relative;
-    			right: -0.5rem;
-    		}
-    	}
 
-	}
-	@media (max-width: 540px) {
-		.text-img-2 {
-		  	&::before {
-		     height: 150px;
-		     width: 170px;
-		     right: -1.5rem;
-		     bottom: -1.4rem;
-		    }
-  		}
-  		.text-info{
-  			padding-top: 2rem;
-  			text-align: center;
-  			width: 450px;
-  		}
-	}
-	@media (min-width: 501px) and (max-width: 767px) {
-		.text-info{
-			padding-top: 2rem;
-  			text-align: center;
-  			width: 450px;
-		}
-	} 
-	@media (max-width: 1200px) and (min-width: 992px) {
-	  	.text-img-2 {
-		  	&::before{
-			    height: 150px;
-			    width: 170px;
-			    right: -1.5rem;
-			    bottom: -1.5rem;
-		    }
-	  	}
-  	}
-	.text-info{
-		@include media-breakpoint-up(lg) {
-			width: 450px;
-		}
-	}
+  @media (max-width: 991.98px) and (min-width: 768px) {
+    .text-info {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .text-img-2 {
+      img {
+        max-height: 280px;
+      }
+      &::before {
+        height: 120px;
+        width: 140px;
+        right: -1.2rem;
+        bottom: -1.2rem;
+      }
+    }
+  }
+
+  @media (max-width: 540px) {
+    .text-img-2 {
+      &::before {
+        height: 150px;
+        width: 170px;
+        right: -1.5rem;
+        bottom: -1.4rem;
+      }
+    }
+    .text-info {
+      padding-top: 2rem;
+      text-align: center; /* Center text on small screens */
+      width: 100%; /* Full width on mobile */
+    }
+  }
+
+  @media (min-width: 541px) and (max-width: 767px) {
+    .text-info {
+      padding-top: 2rem;
+      text-align: center; /* Center text on small screens */
+      width: 100%; /* Full width on mobile */
+    }
+  }
+
+  @media (max-width: 1200px) and (min-width: 992px) {
+    .text-img-2 {
+      &::before {
+        height: 150px;
+        width: 170px;
+        right: -1.5rem;
+        bottom: -1.5rem;
+      }
+    }
+  }
+
+  .text-info {
+    @include media-breakpoint-up(lg) {
+      max-width: 450px;
+      margin-left: auto; /* Align text block to the right */
+    }
+  }
 }
