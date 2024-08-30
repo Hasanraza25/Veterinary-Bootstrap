@@ -4,7 +4,7 @@ This project is built using Bootstrap and Sass. It demonstrates how to customize
 
 ## Live Demo
 
-Check out the live demo of the project [Veterinary](https://hasanraza25.github.io/Veterinary-bootstrap/).
+Check out the live demo of the project [here](https://hasanraza25.github.io/Veterinary-bootstrap/).
 
 ## Features
 
